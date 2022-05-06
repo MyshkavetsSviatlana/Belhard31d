@@ -17,6 +17,6 @@ print('The mean of the numbers you entered is ' + str(round(mean_nums(first_num,
 
 
 # 2
-print(round((float(first_num) + float(second_num) + float(third_num))/3, 3))
+print(round((first_num + second_num + third_num)/3, 3))
 
 
