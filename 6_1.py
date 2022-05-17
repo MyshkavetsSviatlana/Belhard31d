@@ -18,7 +18,6 @@ def decimal_to_binary(a):
     if a == 0:
         return 0
     else:
-
         sequence = []
         b = 1
         while a/b >= 1:
@@ -26,7 +25,6 @@ def decimal_to_binary(a):
             b *= 2
         sequence_str = [str(i) for i in sequence]
         sequence_str_whole = [i[:i.find('.')] for i in sequence_str]
-
         result = ''
         for i in sequence_str_whole:
             if float(i) % 2 == 0:
