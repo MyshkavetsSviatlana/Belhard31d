@@ -31,10 +31,10 @@ def decimal_to_binary(a):
                 result += '0'
             else:
                 result += '1'
-        return print(result[::-1])
+        return result[::-1]
 
 
-print(decimal_to_binary(2))
+print(decimal_to_binary(3))
 
 
 
