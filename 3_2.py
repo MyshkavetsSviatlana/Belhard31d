@@ -7,7 +7,7 @@ third_num = float(input('Enter any integer: '))
 
 # 1
 def mean_nums(*args):
-    """"Returns the mean of all arguments"""
+    """Returns the mean of all arguments"""
     sum_num = 0
     for num in args:
         sum_num += num
