@@ -46,7 +46,7 @@ def decimal_to_binary(a):
         return result[::-1] + '.' + sequence_float
 
 
-print(decimal_to_binary(3))
+print(decimal_to_binary(2))
 
 
 def binary_to_decimal(a):
@@ -61,4 +61,4 @@ def binary_to_decimal(a):
     return result
 
 
-print(binary_to_decimal(11))
+print(binary_to_decimal(10))
