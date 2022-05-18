@@ -46,11 +46,11 @@ def decimal_to_binary(a):
         return whole_decimal_to_binary(a) + '.' + sequence_float
 
 
-print(decimal_to_binary(126))
+print(decimal_to_binary(206.116))
 
 
 def binary_to_decimal(a):
-    """Converts binary numbers to decimal ones."""
+    """Converts whole binary numbers to decimal ones."""
     if str(a).count('.') == 0:
         result = 0
         i = len(str(a)) - 1
@@ -61,7 +61,7 @@ def binary_to_decimal(a):
                 i -= 1
         return result
     else:
-        print('Wrong type. Argument should be int, float or str.')
+        print('Too difficult. Find another converter')
 
 
 print(binary_to_decimal(1111110))
