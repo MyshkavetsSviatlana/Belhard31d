@@ -46,32 +46,29 @@ def decimal_to_binary(a):
         return whole_decimal_to_binary(a) + '.' + sequence_float
 
 
-print(decimal_to_binary(1.1))
+print(decimal_to_binary(126))
 
 
-def whole_binary_to_decimal(a):
+def binary_to_decimal(a):
     """Converts binary numbers to decimal ones."""
-    result = 0
-    i = len(str(a)) - 1
-    while i >= 0:
-        for num in str(a):
-            int_result = float(num) * (2 ** i)
-            result += int_result
-            i -= 1
-    return result
-
-
-# print(whole_binary_to_decimal(110010))
-
-
-def binary_t0_decimal(a):
-    if isinstance(a, float) or isinstance(a, str):
-        ind = str(a).find('.')
-        print(ind)
-        d = '0.' + str(a)[:ind:-1]
-        print(d)
+    if str(a).count('.') == 0:
+        result = 0
+        i = len(str(a)) - 1
+        while i >= 0:
+            for num in str(a):
+                int_result = float(num) * (2 ** i)
+                result += int_result
+                i -= 1
+        return result
     else:
-        print(a)
+        print('Wrong type. Argument should be int, float or str.')
 
 
-print(binary_t0_decimal(11001110.0001110110))
+print(binary_to_decimal(1111110))
+
+
+
+
+
+
+
