@@ -14,4 +14,3 @@ else:
     result_list.extend(num_list[n+1:])
     result_list.extend(num_list[:n+1])
     print(result_list)
-

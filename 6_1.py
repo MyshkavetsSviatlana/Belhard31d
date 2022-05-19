@@ -65,10 +65,3 @@ def binary_to_decimal(a):
 
 
 print(binary_to_decimal(1111110))
-
-
-
-
-
-
-
