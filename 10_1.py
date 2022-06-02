@@ -20,9 +20,9 @@ def web_page(canonical_url, og_url, title):
 
 
 class GeniusRequest(BaseModel):
-    annotation = annotation(str)
-    referent = referent(any, any, any, any)
-    web_page = web_page(any, any, str)
+    annotation: dict
+    referent: dict
+    web_page: dict
 
 
 def get_response(data: GeniusRequest):
