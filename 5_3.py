@@ -7,9 +7,9 @@ result = [i for i in range(0, n+1) if i % 2 == 0]
 a = 0
 b = 5
 while b < len(result) + 5:
-    print(result[a:b])
-    a += 5
+    a += 5 
     b += 5
+    print(result[a:b])
 
 # 2
 n = int(input('Enter any number: '))

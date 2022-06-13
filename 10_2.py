@@ -1,4 +1,4 @@
-from pydantic import BaseModel, HttpUrl, Field
+from pydantic import BaseModel, HttpUrl, Field, root_validator
 from requests import Session
 from http import HTTPStatus
 
@@ -21,6 +21,8 @@ class _Referent(BaseModel):
     fragment: str
     context_for_display: _Context_for_display
 
+    # @root_validator(values):
+    #     if values[raw_annotatable_url] or
 
 class _Web_page(BaseModel):
     canonical_url: HttpUrl | None
@@ -75,4 +77,4 @@ print(data)
 print(get_response(data))
 
 # 1. Как ввести сейчас аргументы в GeniusRequest, чтобы сработал get_response(data)?
-# 2. В web_page один из ключей обязаьтелен
+# 2. В web_page один из ключей обязателен.

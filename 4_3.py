@@ -8,9 +8,9 @@ n = int(input('Enter any integer: '))
 # outer_dict = {}
 # for i in range(0, n + 1):
 #     inner_dict = {}
-#     outer_dict[i] = inner_dict
 #     inner_dict['name'] = input('Enter your name: ')
 #     inner_dict['email'] = input('Enter your email: ')
+#     outer_dict[i] = inner_dict
 #     print(outer_dict)
 #
 # # 2

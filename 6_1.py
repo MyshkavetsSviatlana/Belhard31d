@@ -24,7 +24,7 @@ def whole_decimal_to_binary(a):
         print('Wrong type. Argument should be int or float.')
 
 
-print(whole_decimal_to_binary(126))
+print(whole_decimal_to_binary(1000000))
 
 
 def decimal_to_binary(a):
@@ -65,3 +65,15 @@ def binary_to_decimal(a):
 
 
 print(binary_to_decimal(1111110))
+
+# не до конца
+def decimal_to_binary(decimal: int) -> str:
+    binary = []
+    while decimal //2 >0:
+        binary.append(str(decimal % 2))
+        decimal //= 2
+    return ''.join(binary[::-1])
+
+
+result = decimal_to_binary(15)
+print(result)

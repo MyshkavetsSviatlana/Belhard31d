@@ -22,7 +22,7 @@ cur.execute('''
 conn.commit()
 
 # cur.execute('''
-#     INSERT INTO product(id, name, descr, category) VALUES(6, 'PL-BY', 'Poland to Belarus', 1);
+#     INSERT INTO product(id, name, descr, category) VALUES(7, 'GB-RU', 'Great Britain to Russia', 1);
 # ''')
 # conn.commit()
 
@@ -56,3 +56,4 @@ print(cur.fetchall())
 
 # Новые INSERT писать сверху или можно одним многострочным запросом?
 # Надо ли старые удалять, потом что Unique выбивает?
+
