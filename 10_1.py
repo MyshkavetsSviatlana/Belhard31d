@@ -28,7 +28,7 @@ class GeniusRequest(BaseModel):
 def get_response(data: GeniusRequest):
     with Session() as session:
         response = session.get(
-            url='api.genius.com/web_pages/lookup?',
+            url='http://api.genius.com/web_pages/lookup?',
             params=data.dict()
         )
         if response == HTTPStatus.OK:
@@ -41,4 +41,4 @@ data = GeniusRequest(annotation=annotation("hello **world!**"),
                                        " from inside of vim, with a vim command:"),
                      web_page=web_page(None, None, 'Secret of Mana'))
 print(data)
-# print(get_response(data))
+print(get_response(data))
