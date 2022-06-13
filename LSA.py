@@ -53,20 +53,15 @@ conjunctions = ['а', 'именно', 'благо', 'благодаря', 'бу�
                 'что', 'чтоб', 'чтобы', 'чуть']
 
 # Список служебных частей речи (предлоги, союзы, частицы)
-
-
 auxiliary_PoS = set(pronouns + conjunctions + particles)
 
+
 # Преобразование списка строк в список списков строк с удалением точек в конце предложения
-
-
 # и приведением в нижний регистр.
 data_split_words = [sentence.lower().replace('.', '').split(' ') for sentence in data]
 
 
 # Избавление от знаков препинания.
-
-
 for sentence in data_split_words:
     for word in sentence:
         for symbol in word:
@@ -82,7 +77,6 @@ print(data_split_words)
 # print(data_no_auxiliaries)
 
 # Составление матрицы
-
 word_matrix = {}
 for sentence in data_split_words:
     for word in sentence:
