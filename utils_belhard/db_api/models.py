@@ -1,5 +1,6 @@
+from datetime import datetime
 from sqlalchemy import Column, SmallInteger, BigInteger, VARCHAR, DECIMAL, ForeignKey, \
-    Boolean, Integer, DateTime
+    Boolean, Integer, TIMESTAMP
 from sqlalchemy.orm import declarative_base
 
 
@@ -48,7 +49,7 @@ class Invoice(Base):
     __tablename__: str = "invoices"
     id = Column(BigInteger, primary_key=True)
     user_id = Column(BigInteger, ForeignKey('users.id'), nullable=False)
-    date_created = Column(DateTime, nullable=False)
+    date_created = Column(TIMESTAMP, default=datetime.now(), nullable=False)
     total = Column(SmallInteger, nullable=False)
     status_id = Column(SmallInteger, ForeignKey('statuses.id'), nullable=False)
 
@@ -57,7 +58,7 @@ class Order(Base):
     __tablename__: str = "orders"
     id = Column(BigInteger, primary_key=True)
     user_id = Column(BigInteger, ForeignKey('users.id'), nullable=False)
-    date_created = Column(DateTime, nullable=False)
+    date_created = Column(TIMESTAMP, default=datetime.now(), nullable=False)
     status_id = Column(SmallInteger, ForeignKey('statuses.id'), nullable=False)
     invoice_id = Column(BigInteger, ForeignKey('invoices.id'), nullable=False)
 
